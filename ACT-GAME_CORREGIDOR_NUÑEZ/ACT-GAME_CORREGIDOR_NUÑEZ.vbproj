@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1AB2EC1-9186-4B2E-8630-4EE6DD4ABE02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ACT_GAME_CORREGIDOR_NUÑEZ.My.MyApplication</StartupObject>
+    <RootNamespace>ACT_GAME_CORREGIDOR_NUÑEZ</RootNamespace>
+    <AssemblyName>ACT-GAME_CORREGIDOR_NUÑEZ</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ACT-GAME_CORREGIDOR_NUÑEZ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ACT-GAME_CORREGIDOR_NUÑEZ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DLSZ.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Games\evadethemissiles_main.Designer.vb">
+      <DependentUpon>evadethemissiles_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\evadethemissiles_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Games\mathchallenge_main.Designer.vb">
+      <DependentUpon>mathchallenge_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\mathchallenge_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Games\rockpaperscissors_main.Designer.vb">
+      <DependentUpon>rockpaperscissors_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\rockpaperscissors_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Games\whackamole_main.Designer.vb">
+      <DependentUpon>whackamole_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Games\whackamole_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\game_main.Designer.vb">
+      <DependentUpon>game_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\game_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\game_welcome.Designer.vb">
+      <DependentUpon>game_welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\game_welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\whackamole_settings.Designer.vb">
+      <DependentUpon>whackamole_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\whackamole_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\Functions.vb" />
+    <Compile Include="Functions\game_variables.vb" />
+    <Compile Include="Functions\mathchallenge_questions.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Games\evadethemissiles_main.resx">
+      <DependentUpon>evadethemissiles_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Games\mathchallenge_main.resx">
+      <DependentUpon>mathchallenge_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Games\rockpaperscissors_main.resx">
+      <DependentUpon>rockpaperscissors_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Games\whackamole_main.resx">
+      <DependentUpon>whackamole_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\game_main.resx">
+      <DependentUpon>game_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\game_welcome.resx">
+      <DependentUpon>game_welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\whackamole_settings.resx">
+      <DependentUpon>whackamole_settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\char1_basic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\char1_exploded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\game_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\glove_idle_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\glove_idle_right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\missile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mole_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mole_hit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mole_hit_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mole_hit_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mole_show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\paper_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\paper_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rock_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rock_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rockpaperscissors_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\scissor_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\scissor_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\whackamole_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\evadethemissiles_icon_127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\evadethemissles_icon_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mathchallenge_icon_127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mathchallenge_icon_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rockpaperscissor_icon_127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rockpaperscissors_icon_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\whackamole_icon_127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\whackamole_icon_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\rockpaperscissors_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\evadeamissile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\whackamole_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\mathchallenge_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\cont_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\cont_btn_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\evadeamissile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\buttons\cont_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\rockpaperscissors_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\whackamole_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\mathchallenge_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\game_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\game\20.png" />
+    <None Include="assets\game\19.png" />
+    <None Include="assets\game\18.png" />
+    <None Include="assets\game\17.png" />
+    <None Include="assets\game\16.png" />
+    <None Include="assets\game\15.png" />
+    <None Include="assets\game\14.png" />
+    <None Include="assets\game\13.png" />
+    <None Include="assets\game\12.png" />
+    <None Include="assets\icons\whackamole_icon_256_hover.png" />
+    <None Include="assets\icons\rockpaperscissors_icon_256_hover.png" />
+    <None Include="assets\icons\mathchallenge_icon_256_hover.png" />
+    <None Include="assets\icons\evadethemissles_icon_256_hover.png" />
+    <None Include="assets\icons\whackamole_icon_256.png" />
+    <None Include="assets\icons\rockpaperscissors_icon_256.png" />
+    <None Include="assets\icons\mathchallenge_icon_256.png" />
+    <None Include="assets\icons\evadethemissles_icon_256.png" />
+    <None Include="assets\buttons\cont_btn_hover.png" />
+    <Content Include="DLSZ.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
