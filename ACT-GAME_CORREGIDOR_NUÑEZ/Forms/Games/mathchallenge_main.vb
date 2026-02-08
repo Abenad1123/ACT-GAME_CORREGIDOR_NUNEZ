@@ -21,10 +21,11 @@ Public Class mathchallenge_main
         OpenForm(Of game_main)(Me)
     End Sub
 
-    Dim Level As Integer = 0
+    Dim Level As Integer = 6
     Dim currentQuestion As Integer = 0
+    Dim prevQuestions As New List(Of Integer)
     Dim rand As New Random()
-    Dim lives As Integer = 5
+    Dim lives As Integer = 3
     Private Sub Initializer(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadFont("minecraft", My.Resources.minecraft_font)
 
@@ -41,6 +42,7 @@ Public Class mathchallenge_main
         Label2.Font = GetFont("minecraft", 60)
 
         InitalText()
+        If Level > 0 Then LoadQuestion()
     End Sub
 
     Private Sub InitalText()
@@ -54,12 +56,17 @@ Public Class mathchallenge_main
 
     Private Sub LoadQuestion()
         currentQuestion = rand.Next(0, question.questions.Count)
+        If prevQuestions.Contains(currentQuestion) Then
+            LoadQuestion()
+            Exit Sub
+        End If
+
         Label1.Text = question.questions(currentQuestion)
         Button1.Text = question.choices(currentQuestion)(0)
         Button2.Text = question.choices(currentQuestion)(1)
         Button3.Text = question.choices(currentQuestion)(2)
         Button4.Text = question.choices(currentQuestion)(3)
-
+        prevQuestions.Add(currentQuestion)
     End Sub
 
     Private Sub UpdateMap()
@@ -75,13 +82,11 @@ Public Class mathchallenge_main
 
         If lives = 0 Then
             MsgBox("Game Over! You have no more lives left. Restarting the game.")
-            lives = 5
+            lives = 3
             Level = 0
             heart1.Image = My.Resources.heart
             heart2.Image = My.Resources.heart
             heart3.Image = My.Resources.heart
-            heart4.Image = My.Resources.heart
-            heart5.Image = My.Resources.heart
             InitalText()
             Exit Sub
         End If
@@ -93,11 +98,14 @@ Public Class mathchallenge_main
             UpdateMap()
             Exit Sub
         ElseIf Level = 8 Then
-            MsgBox("Congratulations! You've completed the game. Restarting.")
-            lives = 5
+            MessageBox.Show("Congratulations! You've completed the game. Restarting.", "Game Complete")
+            lives = 3
             Level = 0
             InitalText()
             UpdateMap()
+            heart1.Image = My.Resources.heart
+            heart2.Image = My.Resources.heart
+            heart3.Image = My.Resources.heart
             Exit Sub
         End If
 
@@ -106,25 +114,23 @@ Public Class mathchallenge_main
         If btn.Text = question.answers(currentQuestion) Then correct = True
 
         If correct Then
-            MessageBox.Show("Correct!")
+            MessageBox.Show("Correct!", "Annoucement")
             Level += 1
+            If Level = 8 Then
+                UpdateMap()
+                checkanswerEvent(Nothing, Nothing)
+                Exit Sub
+            End If
             UpdateMap()
             LoadQuestion()
         Else
             lives -= 1
             Select Case lives
-                Case 0
-                    heart1.Image = My.Resources.heart_dead
-                Case 1
-                    heart2.Image = My.Resources.heart_dead
-                Case 2
-                    heart3.Image = My.Resources.heart_dead
-                Case 3
-                    heart4.Image = My.Resources.heart_dead
-                Case 4
-                    heart5.Image = My.Resources.heart_dead
+                Case 0 : heart1.Image = My.Resources.heart_dead
+                Case 1 : heart2.Image = My.Resources.heart_dead
+                Case 2 : heart3.Image = My.Resources.heart_dead
             End Select
-            MessageBox.Show("Wrong answer. Try again.")
+            MessageBox.Show("Wrong answer. Try again.", "Annoucement")
         End If
     End Sub
 End Class

@@ -39,8 +39,6 @@ Partial Class mathchallenge_main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.heart5 = New System.Windows.Forms.PictureBox()
-        Me.heart4 = New System.Windows.Forms.PictureBox()
         Me.heart3 = New System.Windows.Forms.PictureBox()
         Me.heart2 = New System.Windows.Forms.PictureBox()
         Me.heart1 = New System.Windows.Forms.PictureBox()
@@ -49,8 +47,6 @@ Partial Class mathchallenge_main
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
-        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,8 +232,6 @@ Partial Class mathchallenge_main
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.heart5, 5, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.heart4, 4, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.heart3, 3, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.heart2, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.heart1, 1, 0)
@@ -250,30 +244,6 @@ Partial Class mathchallenge_main
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(904, 127)
         Me.TableLayoutPanel2.TabIndex = 23
-        '
-        'heart5
-        '
-        Me.heart5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.heart5.Image = CType(resources.GetObject("heart5.Image"), System.Drawing.Image)
-        Me.heart5.Location = New System.Drawing.Point(798, 13)
-        Me.heart5.Margin = New System.Windows.Forms.Padding(0)
-        Me.heart5.Name = "heart5"
-        Me.heart5.Size = New System.Drawing.Size(100, 100)
-        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.heart5.TabIndex = 5
-        Me.heart5.TabStop = False
-        '
-        'heart4
-        '
-        Me.heart4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.heart4.Image = CType(resources.GetObject("heart4.Image"), System.Drawing.Image)
-        Me.heart4.Location = New System.Drawing.Point(689, 13)
-        Me.heart4.Margin = New System.Windows.Forms.Padding(0)
-        Me.heart4.Name = "heart4"
-        Me.heart4.Size = New System.Drawing.Size(100, 100)
-        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.heart4.TabIndex = 4
-        Me.heart4.TabStop = False
         '
         'heart3
         '
@@ -344,8 +314,6 @@ Partial Class mathchallenge_main
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
-        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -370,8 +338,6 @@ Partial Class mathchallenge_main
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents heart5 As PictureBox
-    Friend WithEvents heart4 As PictureBox
     Friend WithEvents heart3 As PictureBox
     Friend WithEvents heart2 As PictureBox
     Friend WithEvents heart1 As PictureBox
