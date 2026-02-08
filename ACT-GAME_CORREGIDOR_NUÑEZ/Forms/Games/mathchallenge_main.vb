@@ -24,7 +24,26 @@ Public Class mathchallenge_main
     Dim Level As Integer = 0
     Dim currentQuestion As Integer = 0
     Dim rand As New Random()
+    Dim lives As Integer = 5
     Private Sub Initializer(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadFont("minecraft", My.Resources.minecraft_font)
+
+        Dim btns() As Button = {Button1, Button2, Button3, Button4}
+        For Each btn In btns
+            btn.UseCompatibleTextRendering = True
+            btn.Font = GetFont("minecraft", 18)
+        Next
+
+        Label1.UseCompatibleTextRendering = True
+        Label1.Font = GetFont("minecraft", 22)
+
+        Label2.UseCompatibleTextRendering = True
+        Label2.Font = GetFont("minecraft", 60)
+
+        InitalText()
+    End Sub
+
+    Private Sub InitalText()
         Label1.Text = "Click any answer button to start"
         UpdateMap()
         Button1.Text = "Start"
@@ -54,18 +73,37 @@ Public Class mathchallenge_main
     Private Sub checkanswerEvent(sender As Object, e As EventArgs) Handles Button1.Click, Button2.Click, Button3.Click, Button4.Click
         Dim btn As Button = CType(sender, Button)
 
-        If Level = 0 Or Level = 8 Then
+        If lives = 0 Then
+            MsgBox("Game Over! You have no more lives left. Restarting the game.")
+            lives = 5
+            Level = 0
+            heart1.Image = My.Resources.heart
+            heart2.Image = My.Resources.heart
+            heart3.Image = My.Resources.heart
+            heart4.Image = My.Resources.heart
+            heart5.Image = My.Resources.heart
+            InitalText()
+            Exit Sub
+        End If
+
+        If Level = 0 Then
             Level = 1
+            InitalText()
             LoadQuestion()
+            UpdateMap()
+            Exit Sub
+        ElseIf Level = 8 Then
+            MsgBox("Congratulations! You've completed the game. Restarting.")
+            lives = 5
+            Level = 0
+            InitalText()
             UpdateMap()
             Exit Sub
         End If
 
         Dim correct As Boolean = False
 
-        If btn.Text = question.answers(currentQuestion) Then
-            correct = True
-        End If
+        If btn.Text = question.answers(currentQuestion) Then correct = True
 
         If correct Then
             MessageBox.Show("Correct!")
@@ -73,6 +111,19 @@ Public Class mathchallenge_main
             UpdateMap()
             LoadQuestion()
         Else
+            lives -= 1
+            Select Case lives
+                Case 0
+                    heart1.Image = My.Resources.heart_dead
+                Case 1
+                    heart2.Image = My.Resources.heart_dead
+                Case 2
+                    heart3.Image = My.Resources.heart_dead
+                Case 3
+                    heart4.Image = My.Resources.heart_dead
+                Case 4
+                    heart5.Image = My.Resources.heart_dead
+            End Select
             MessageBox.Show("Wrong answer. Try again.")
         End If
     End Sub

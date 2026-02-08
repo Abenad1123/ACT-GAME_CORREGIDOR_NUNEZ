@@ -283,6 +283,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property heart() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("heart", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property heart_dead() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("heart_dead", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property home_icon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("home_icon", resourceCulture)
@@ -317,6 +337,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("mathchallenge_icon_256_hover", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property minecraft_font() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("minecraft_font", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         

@@ -38,9 +38,22 @@ Partial Class mathchallenge_main
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.heart5 = New System.Windows.Forms.PictureBox()
+        Me.heart4 = New System.Windows.Forms.PictureBox()
+        Me.heart3 = New System.Windows.Forms.PictureBox()
+        Me.heart2 = New System.Windows.Forms.PictureBox()
+        Me.heart1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.heart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -49,7 +62,7 @@ Partial Class mathchallenge_main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.go_back, Me.GamesToolStripMenuItem, Me.settings})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1000, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1902, 28)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -106,34 +119,36 @@ Partial Class mathchallenge_main
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.ColumnCount = 9
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.039442!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.039443!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.43385!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395235!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395236!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.43385!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395235!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395236!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.43385!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395235!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.395236!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.43385!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.039442!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.039443!))
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Button3, 5, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Button4, 7, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 3, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 28)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.464286!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.01786!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.95536!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.928572!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.598214!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.035714!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1000, 534)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.63682!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.49751!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.78607!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.64677!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.258706!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.965272!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1902, 1005)
         Me.TableLayoutPanel1.TabIndex = 24
         '
         'Button2
@@ -141,9 +156,9 @@ Partial Class mathchallenge_main
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(300, 440)
+        Me.Button2.Location = New System.Drawing.Point(569, 873)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(158, 45)
+        Me.Button2.Size = New System.Drawing.Size(306, 77)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = False
@@ -153,9 +168,9 @@ Partial Class mathchallenge_main
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(537, 440)
+        Me.Button3.Location = New System.Drawing.Point(1021, 873)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(158, 45)
+        Me.Button3.Size = New System.Drawing.Size(306, 77)
         Me.Button3.TabIndex = 21
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = False
@@ -165,9 +180,9 @@ Partial Class mathchallenge_main
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(774, 440)
+        Me.Button4.Location = New System.Drawing.Point(1473, 873)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(158, 45)
+        Me.Button4.Size = New System.Drawing.Size(306, 77)
         Me.Button4.TabIndex = 22
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = False
@@ -177,9 +192,9 @@ Partial Class mathchallenge_main
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(63, 440)
+        Me.Button1.Location = New System.Drawing.Point(117, 873)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(158, 45)
+        Me.Button1.Size = New System.Drawing.Size(306, 77)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = False
@@ -191,31 +206,129 @@ Partial Class mathchallenge_main
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei Light", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(300, 390)
+        Me.Label1.Location = New System.Drawing.Point(569, 763)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(395, 47)
+        Me.Label1.Size = New System.Drawing.Size(758, 107)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Question"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.PictureBox1, 7)
+        Me.TableLayoutPanel1.SetColumnSpan(Me.PictureBox1, 5)
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources._12
-        Me.PictureBox1.Location = New System.Drawing.Point(63, 26)
+        Me.PictureBox1.Location = New System.Drawing.Point(429, 130)
         Me.PictureBox1.Name = "PictureBox1"
         Me.TableLayoutPanel1.SetRowSpan(Me.PictureBox1, 2)
-        Me.PictureBox1.Size = New System.Drawing.Size(869, 361)
+        Me.PictureBox1.Size = New System.Drawing.Size(1038, 630)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 6
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 4)
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.heart5, 5, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.heart4, 4, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.heart3, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.heart2, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.heart1, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(426, 0)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(0)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(904, 127)
+        Me.TableLayoutPanel2.TabIndex = 23
+        '
+        'heart5
+        '
+        Me.heart5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.heart5.Image = CType(resources.GetObject("heart5.Image"), System.Drawing.Image)
+        Me.heart5.Location = New System.Drawing.Point(798, 13)
+        Me.heart5.Margin = New System.Windows.Forms.Padding(0)
+        Me.heart5.Name = "heart5"
+        Me.heart5.Size = New System.Drawing.Size(100, 100)
+        Me.heart5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart5.TabIndex = 5
+        Me.heart5.TabStop = False
+        '
+        'heart4
+        '
+        Me.heart4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.heart4.Image = CType(resources.GetObject("heart4.Image"), System.Drawing.Image)
+        Me.heart4.Location = New System.Drawing.Point(689, 13)
+        Me.heart4.Margin = New System.Windows.Forms.Padding(0)
+        Me.heart4.Name = "heart4"
+        Me.heart4.Size = New System.Drawing.Size(100, 100)
+        Me.heart4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart4.TabIndex = 4
+        Me.heart4.TabStop = False
+        '
+        'heart3
+        '
+        Me.heart3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.heart3.Image = CType(resources.GetObject("heart3.Image"), System.Drawing.Image)
+        Me.heart3.Location = New System.Drawing.Point(581, 13)
+        Me.heart3.Margin = New System.Windows.Forms.Padding(0)
+        Me.heart3.Name = "heart3"
+        Me.heart3.Size = New System.Drawing.Size(100, 100)
+        Me.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart3.TabIndex = 3
+        Me.heart3.TabStop = False
+        '
+        'heart2
+        '
+        Me.heart2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.heart2.Image = CType(resources.GetObject("heart2.Image"), System.Drawing.Image)
+        Me.heart2.Location = New System.Drawing.Point(473, 13)
+        Me.heart2.Margin = New System.Windows.Forms.Padding(0)
+        Me.heart2.Name = "heart2"
+        Me.heart2.Size = New System.Drawing.Size(100, 100)
+        Me.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart2.TabIndex = 2
+        Me.heart2.TabStop = False
+        '
+        'heart1
+        '
+        Me.heart1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.heart1.Image = CType(resources.GetObject("heart1.Image"), System.Drawing.Image)
+        Me.heart1.Location = New System.Drawing.Point(365, 13)
+        Me.heart1.Margin = New System.Windows.Forms.Padding(0)
+        Me.heart1.Name = "heart1"
+        Me.heart1.Size = New System.Drawing.Size(100, 100)
+        Me.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.heart1.TabIndex = 0
+        Me.heart1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift Condensed", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(207, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(0, 20, 0, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(154, 81)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "LIVES"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'mathchallenge_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1000, 562)
+        Me.ClientSize = New System.Drawing.Size(1902, 1033)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -229,6 +342,13 @@ Partial Class mathchallenge_main
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.heart5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.heart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,4 +369,11 @@ Partial Class mathchallenge_main
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents heart5 As PictureBox
+    Friend WithEvents heart4 As PictureBox
+    Friend WithEvents heart3 As PictureBox
+    Friend WithEvents heart2 As PictureBox
+    Friend WithEvents heart1 As PictureBox
+    Friend WithEvents Label2 As Label
 End Class

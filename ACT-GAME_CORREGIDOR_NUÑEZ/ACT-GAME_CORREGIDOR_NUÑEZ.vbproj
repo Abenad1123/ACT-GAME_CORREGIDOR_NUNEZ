@@ -118,6 +118,7 @@
     <Compile Include="Forms\Settings\whackamole_settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Functions\FontManager.vb" />
     <Compile Include="Functions\Functions.vb" />
     <Compile Include="Functions\game_variables.vb" />
     <Compile Include="Functions\mathchallenge_questions.vb" />
@@ -312,6 +313,8 @@
     <None Include="assets\icons\game_icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\game\heart.png" />
+    <None Include="assets\game\heart_dead.png" />
     <None Include="assets\game\20.png" />
     <None Include="assets\game\19.png" />
     <None Include="assets\game\18.png" />
