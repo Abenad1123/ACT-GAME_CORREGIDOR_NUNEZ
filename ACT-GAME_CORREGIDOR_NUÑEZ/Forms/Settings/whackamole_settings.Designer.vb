@@ -27,10 +27,9 @@ Partial Class whackamole_settings
         Me.go_back = New System.Windows.Forms.ToolStripMenuItem()
         Me.GamesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.rockpaperscissors_btn = New System.Windows.Forms.ToolStripMenuItem()
-        Me.fallingblock_btn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.evadethemissiles_btn = New System.Windows.Forms.ToolStripMenuItem()
         Me.whackamole_btn = New System.Windows.Forms.ToolStripMenuItem()
         Me.mathchallenge_btn = New System.Windows.Forms.ToolStripMenuItem()
-        Me.settings = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -48,7 +47,7 @@ Partial Class whackamole_settings
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.go_back, Me.GamesToolStripMenuItem, Me.settings})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.go_back, Me.GamesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1000, 28)
@@ -64,7 +63,7 @@ Partial Class whackamole_settings
         '
         'GamesToolStripMenuItem
         '
-        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.rockpaperscissors_btn, Me.fallingblock_btn, Me.whackamole_btn, Me.mathchallenge_btn})
+        Me.GamesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.rockpaperscissors_btn, Me.evadethemissiles_btn, Me.whackamole_btn, Me.mathchallenge_btn})
         Me.GamesToolStripMenuItem.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.game_icon
         Me.GamesToolStripMenuItem.Name = "GamesToolStripMenuItem"
         Me.GamesToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
@@ -77,12 +76,12 @@ Partial Class whackamole_settings
         Me.rockpaperscissors_btn.Size = New System.Drawing.Size(226, 26)
         Me.rockpaperscissors_btn.Text = "Rock, Paper, Scissors"
         '
-        'fallingblock_btn
+        'evadethemissiles_btn
         '
-        Me.fallingblock_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.evadeamissile_icon
-        Me.fallingblock_btn.Name = "fallingblock_btn"
-        Me.fallingblock_btn.Size = New System.Drawing.Size(226, 26)
-        Me.fallingblock_btn.Text = "Evade the Missle"
+        Me.evadethemissiles_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.evadeamissile_icon
+        Me.evadethemissiles_btn.Name = "evadethemissiles_btn"
+        Me.evadethemissiles_btn.Size = New System.Drawing.Size(226, 26)
+        Me.evadethemissiles_btn.Text = "Evade the Missle"
         '
         'whackamole_btn
         '
@@ -97,14 +96,6 @@ Partial Class whackamole_settings
         Me.mathchallenge_btn.Name = "mathchallenge_btn"
         Me.mathchallenge_btn.Size = New System.Drawing.Size(226, 26)
         Me.mathchallenge_btn.Text = "Math Challenge"
-        '
-        'settings
-        '
-        Me.settings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.settings.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.settings_icon
-        Me.settings.Name = "settings"
-        Me.settings.Size = New System.Drawing.Size(96, 24)
-        Me.settings.Text = "Settings"
         '
         'TableLayoutPanel1
         '
@@ -159,15 +150,16 @@ Partial Class whackamole_settings
         '
         'TextBox1
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(203, 154)
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TextBox1.Location = New System.Drawing.Point(203, 157)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(194, 26)
         Me.TextBox1.TabIndex = 2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(403, 154)
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button2.Location = New System.Drawing.Point(403, 158)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 23)
         Me.Button2.TabIndex = 4
@@ -187,7 +179,8 @@ Partial Class whackamole_settings
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(203, 78)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button1.Location = New System.Drawing.Point(203, 82)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -209,17 +202,18 @@ Partial Class whackamole_settings
         '
         'ComboBox1
         '
-        Me.ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Easy", "Normal", "Meduim", "Hard", "Extreme"})
-        Me.ComboBox1.Location = New System.Drawing.Point(203, 230)
+        Me.ComboBox1.Location = New System.Drawing.Point(203, 234)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(194, 28)
         Me.ComboBox1.TabIndex = 7
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(403, 230)
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button3.Location = New System.Drawing.Point(403, 234)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(96, 23)
         Me.Button3.TabIndex = 8
@@ -264,10 +258,9 @@ Partial Class whackamole_settings
     Friend WithEvents go_back As ToolStripMenuItem
     Friend WithEvents GamesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents rockpaperscissors_btn As ToolStripMenuItem
-    Friend WithEvents fallingblock_btn As ToolStripMenuItem
+    Friend WithEvents evadethemissiles_btn As ToolStripMenuItem
     Friend WithEvents whackamole_btn As ToolStripMenuItem
     Friend WithEvents mathchallenge_btn As ToolStripMenuItem
-    Friend WithEvents settings As ToolStripMenuItem
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox

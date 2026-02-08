@@ -33,13 +33,40 @@
     Dim GameRunning As Boolean = False
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles Me.Load
+        LoadFont("minecraft", My.Resources.minecraft_font)
+
+        Label1.UseCompatibleTextRendering = True
+        Label1.Font = GetFont("minecraft", 22)
+
+        Label2.UseCompatibleTextRendering = True
+        Label2.Font = GetFont("minecraft", 22)
+
+        Label3.UseCompatibleTextRendering = True
+        Label3.Font = GetFont("minecraft", 22)
+
+        Label4.UseCompatibleTextRendering = True
+        Label4.Font = GetFont("minecraft", 70)
+
+        Button7.UseCompatibleTextRendering = True
+        Button7.Font = GetFont("minecraft", 22)
+
         Me.Cursor = hammer_idle
         InitialData()
-        MsgBox("Welcome to Whack-A-Mole! Click on the moles as they appear to score points. You have 60 seconds. Good luck!")
+        MessageBox.Show("Welcome to Whack-A-Mole! Click on the moles as they appear to score points. You have 60 seconds. Good luck!", "Game")
     End Sub
 
-    Private Sub Start_Game(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Async Sub Start_Game(sender As Object, e As EventArgs) Handles Button7.Click
         If GameRunning = False Then
+            Await Task.Delay(500)
+            Label4.Text = "3"
+            Await Task.Delay(1000)
+            Label4.Text = "2"
+            Await Task.Delay(1000)
+            Label4.Text = "1"
+            Await Task.Delay(1000)
+            Label4.Text = "START!"
+            Await Task.Delay(500)
+            Label4.Text = ""
             GameRunning = True
             TimerTick()
             SpawnMoles()
@@ -55,9 +82,9 @@
             If timeDuration <= 0 Then
                 GameRunning = False
                 If playerScore > game_var.wam_highestPlayerScore Then
-                    MessageBox.Show("Time's up! Your score: " & playerScore & ". Wow! you achieved the highest score")
+                    MessageBox.Show("Time's up! Your score: " & playerScore & vbCrLf & ". Wow! you achieved the highest score", "Game")
                 Else
-                    MessageBox.Show("Time's up! Your score: " & playerScore)
+                    MessageBox.Show("Time's up! Your score: " & playerScore, "Game")
                 End If
 
                 InitialData()
@@ -100,29 +127,12 @@
         Label3.Text = "HIGHEST SCORE : " & game_var.wam_highestPlayerScore
     End Sub
 
-    Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        ScoreAdd(PictureBox1)
+    Private Sub Btn1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click, PictureBox2.Click, PictureBox3.Click, PictureBox4.Click, PictureBox5.Click, PictureBox6.Click
+        Dim Btn As PictureBox = CType(sender, PictureBox)
+
+        ScoreAdd(Btn)
     End Sub
 
-    Private Sub Btn2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        ScoreAdd(PictureBox2)
-    End Sub
-
-    Private Sub Btn3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        ScoreAdd(PictureBox3)
-    End Sub
-
-    Private Sub Btn4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        ScoreAdd(PictureBox4)
-    End Sub
-
-    Private Sub Btn5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        ScoreAdd(PictureBox5)
-    End Sub
-
-    Private Sub Bt6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-        ScoreAdd(PictureBox6)
-    End Sub
     Private Sub Mouse_Relase(sender As Object, e As EventArgs) Handles PictureBox1.MouseUp, PictureBox2.MouseUp, PictureBox3.MouseUp, PictureBox4.MouseUp, PictureBox5.MouseUp, PictureBox6.MouseUp
         Me.Cursor = hammer_idle
     End Sub
@@ -155,13 +165,5 @@
         mole.Image = My.Resources.mole_hit_3
         Await Task.Delay(60)
         mole.Image = My.Resources.mole_empty
-    End Sub
-
-    Private Sub Mouse_Click(sender As Object, e As MouseEventArgs) Handles PictureBox6.MouseDown, PictureBox5.MouseDown, PictureBox4.MouseDown, PictureBox3.MouseDown, PictureBox2.MouseDown, PictureBox1.MouseDown
-
-    End Sub
-
-    Private Sub Mouse_Relase(sender As Object, e As MouseEventArgs) Handles PictureBox6.MouseUp, PictureBox5.MouseUp, PictureBox4.MouseUp, PictureBox3.MouseUp, PictureBox2.MouseUp, PictureBox1.MouseUp
-
     End Sub
 End Class

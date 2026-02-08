@@ -9,20 +9,33 @@
         "If one pencil costs 7 pesos, how much do 5 pencils cost?",
         "Which fraction is greater?",
         "A bag has 24 marbles. If they are shared equally among 6 kids, how many does each get?",
-        "What is the area of a square with side length 9?"
+        "What is the area of a square with side length 9?",
+        "What is 15 + 27?",
+        "Which number is divisible by 3?",
+        "If a rectangle has length 12 and width 3, what is its area?",
+        "What is 100 − 37?",
+        "What is 7 × 8?",
+        "Which fraction is equal to 0.5?",
+        "If a cake is cut into 8 pieces and you eat 3, what fraction is left?",
+        "What is the square of 6?",
+        "If you subtract 15 from 50, what remains?",
+        "What is the next number? 2, 4, 8, 16, ___",
+        "What is the only even prime number?",
+        "Which number is known as a 'googol'?",
+        "How many sides does a dodecagon have?",
+        "What is the value of pi (π) rounded to 2 decimal places?",
+        "Who is known as the 'Father of Geometry'?",
+        "What is the square root of 144?",
+        "How many degrees are in a right angle?",
+        "What is the smallest perfect square greater than 10?",
+        "What is 11 × 11?",
+        "Which number comes after a trillion in the US numbering system?"
     }
 
     Public Shared answers As New List(Of String) From {
-        "48",
-        "6",
-        "15",
-        "12",
-        "26",
-        "80",
-        "35",
-        "3/4",
-        "4",
-        "81"
+        "48", "6", "15", "12", "26", "80", "35", "4/5", "4", "81",
+        "42", "9", "36", "63", "56", "1/2", "5/8", "36", "35", "32",
+        "2", "10^100", "12", "3.14", "Euclid", "12", "90", "16", "121", "quadrillion"
     }
 
     Public Shared choices As New List(Of List(Of String)) From {
@@ -35,7 +48,26 @@
         New List(Of String) From {"28", "30", "35", "40"},
         New List(Of String) From {"1/2", "2/3", "3/4", "4/5"},
         New List(Of String) From {"3", "4", "5", "6"},
-        New List(Of String) From {"72", "81", "90", "99"}
+        New List(Of String) From {"72", "81", "90", "99"},
+        New List(Of String) From {"35", "42", "40", "37"},
+        New List(Of String) From {"8", "9", "10", "15"},
+        New List(Of String) From {"30", "32", "36", "38"},
+        New List(Of String) From {"63", "67", "73", "70"},
+        New List(Of String) From {"49", "54", "56", "63"},
+        New List(Of String) From {"1/3", "1/2", "2/3", "3/4"},
+        New List(Of String) From {"3/8", "5/8", "1/2", "7/8"},
+        New List(Of String) From {"30", "32", "36", "40"},
+        New List(Of String) From {"32", "33", "34", "35"},
+        New List(Of String) From {"18", "24", "30", "32"},
+        New List(Of String) From {"2", "3", "5", "7"},
+        New List(Of String) From {"10^100", "10^50", "10^10", "10^1000"},
+        New List(Of String) From {"10", "12", "14", "16"},
+        New List(Of String) From {"3.14", "3.15", "3.16", "3.13"},
+        New List(Of String) From {"Pythagoras", "Euclid", "Archimedes", "Newton"},
+        New List(Of String) From {"10", "11", "12", "13"},
+        New List(Of String) From {"45", "90", "180", "60"},
+        New List(Of String) From {"12", "14", "16", "18"},
+        New List(Of String) From {"110", "111", "121", "122"},
+        New List(Of String) From {"billion", "trillion", "quadrillion", "quintillion"}
     }
-
 End Class

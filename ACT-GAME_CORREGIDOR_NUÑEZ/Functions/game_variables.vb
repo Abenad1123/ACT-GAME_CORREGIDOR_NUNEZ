@@ -7,7 +7,6 @@
     Public Shared wam_mole_despawnTime As Integer = 1000 'DEFAULT DIFFICULTY LEVEL: NORMAL
 
     '------- EVADE A MISSILE VARIABLES -------
-    Public Shared evade_a_missile_highestPlayerScore As Integer
-
-
+    Public Shared eam_highestPlayerScore As Integer
+    Public Shared eam_difficulty_level As Integer = "10"
 End Class

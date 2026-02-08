@@ -23,7 +23,25 @@
         PictureBox1.Image = My.Resources.glove_idle_left
         PictureBox2.Image = My.Resources.glove_idle_right
 
-        MsgBox("Welcome to Rock-Paper-Scissors! Choose your weapon and try to beat the AI. Good luck!")
+        LoadFont("minecraft", My.Resources.minecraft_font)
+
+        Label2.UseCompatibleTextRendering = True
+        Label2.Font = GetFont("minecraft", 55)
+
+        Label3.UseCompatibleTextRendering = True
+        Label3.Font = GetFont("minecraft", 55)
+
+        Label4.UseCompatibleTextRendering = True
+        Label4.Font = GetFont("minecraft", 40)
+
+        Dim btns() As Button = {Button1, Button2, Button3}
+        For Each btn In btns
+            btn.UseCompatibleTextRendering = True
+            btn.Font = GetFont("minecraft", 25)
+        Next
+
+
+        MessageBox.Show("Welcome to Rock-Paper-Scissors! Choose your weapon and try to beat the AI. Good luck!", "Game")
         playerScore = 0
         aiScore = 0
 
@@ -81,7 +99,7 @@
     End Sub
 
     Private Async Sub Turn(playerChoice As Integer)
-        Await Task.Delay(200)
+        Await Task.Delay(1000)
         Label4.Text = "The bot is choosing..."
         Await Task.Delay(1000)
         playerFace = playerChoice

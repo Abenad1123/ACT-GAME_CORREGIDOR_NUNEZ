@@ -21,7 +21,11 @@ Public Class mathchallenge_main
         OpenForm(Of game_main)(Me)
     End Sub
 
-    Dim Level As Integer = 6
+    Private Sub settings_Click(sender As Object, e As EventArgs) Handles settings.Click
+        OpenForm(Of mathchallenge_settings)(Me)
+    End Sub
+
+    Dim Level As Integer = 0
     Dim currentQuestion As Integer = 0
     Dim prevQuestions As New List(Of Integer)
     Dim rand As New Random()
@@ -42,7 +46,6 @@ Public Class mathchallenge_main
         Label2.Font = GetFont("minecraft", 60)
 
         InitalText()
-        If Level > 0 Then LoadQuestion()
     End Sub
 
     Private Sub InitalText()
@@ -52,6 +55,7 @@ Public Class mathchallenge_main
         Button2.Text = "Start"
         Button3.Text = "Start"
         Button4.Text = "Start"
+
     End Sub
 
     Private Sub LoadQuestion()
@@ -90,6 +94,7 @@ Public Class mathchallenge_main
             InitalText()
             Exit Sub
         End If
+
 
         If Level = 0 Then
             Level = 1

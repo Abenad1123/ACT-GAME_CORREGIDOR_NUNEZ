@@ -112,6 +112,18 @@
     <Compile Include="Forms\game_welcome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Settings\evadethemissiles_settings.Designer.vb">
+      <DependentUpon>evadethemissiles_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\evadethemissiles_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\mathchallenge_settings.Designer.vb">
+      <DependentUpon>mathchallenge_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\mathchallenge_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Settings\whackamole_settings.Designer.vb">
       <DependentUpon>whackamole_settings.vb</DependentUpon>
     </Compile>
@@ -157,6 +169,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\game_welcome.resx">
       <DependentUpon>game_welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\evadethemissiles_settings.resx">
+      <DependentUpon>evadethemissiles_settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\mathchallenge_settings.resx">
+      <DependentUpon>mathchallenge_settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings\whackamole_settings.resx">
       <DependentUpon>whackamole_settings.vb</DependentUpon>

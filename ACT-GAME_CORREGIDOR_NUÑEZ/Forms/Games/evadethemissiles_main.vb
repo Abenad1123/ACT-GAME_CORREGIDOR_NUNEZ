@@ -1,4 +1,6 @@
-﻿Public Class evadethemissiles_main
+﻿Imports System.Reflection.Emit
+
+Public Class evadethemissiles_main
     Private Sub rockpaperscissors_btn_Click(sender As Object, e As EventArgs) Handles rockpaperscissors_btn.Click
         OpenForm(Of rockpaperscissors_main)(Me)
     End Sub
@@ -19,6 +21,11 @@
         OpenForm(Of game_main)(Me)
     End Sub
 
+    Private Sub settings_Click(sender As Object, e As EventArgs) Handles settings.Click
+        If gameStart Then Exit Sub
+        OpenForm(Of evadethemissiles_settings)(Me)
+    End Sub
+
     Dim playerPosition As Integer = 2
     Dim gameStart As Boolean = False
     Dim playerScore As Integer = 0
@@ -29,9 +36,21 @@
     Dim activeBlocks As New List(Of Control)
     Dim isDead As Boolean = False
 
+    Dim Start_Ignite As Boolean = False
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadFont("minecraft", My.Resources.minecraft_font)
+
+        Label1.UseCompatibleTextRendering = True
+        Label1.Font = GetFont("minecraft", 22)
+
+        Label2.UseCompatibleTextRendering = True
+        Label2.Font = GetFont("minecraft", 22)
+
         ResetBlocks()
-        MsgBox("Welcome to Falling Block! Use A and D to move.")
+        Label1.Text = "Click W or D to start!"
+        Label2.Text = ""
+        MessageBox.Show("Welcome to Falling Block! Use A and D to move.", "Game")
     End Sub
 
     Private Sub FitSize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -41,13 +60,27 @@
         Next
     End Sub
 
-    Private Sub Key_Control(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If Not gameStart Then
+    Private Async Sub Key_Control(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If Not gameStart And Not Start_Ignite Then
+            Start_Ignite = True
+            Label2.Text = ""
+            Await Task.Delay(500)
+            Label1.Text = "3"
+            Await Task.Delay(1000)
+            Label1.Text = "2"
+            Await Task.Delay(1000)
+            Label1.Text = "1"
+            Await Task.Delay(1000)
+            Label1.Text = "START!"
+            Await Task.Delay(500)
+            Label1.Text = "Score : 0"
+            Label2.Text = "High Score : " & playerHighScore
             gameStart = True
             isDead = False
             StartGame()
             RandomBlock()
             Score()
+            Exit Sub
         End If
 
         Select Case e.KeyCode
@@ -83,7 +116,7 @@
         If isDead Then Exit Sub
 
         For Each block As Control In activeBlocks
-            block.Top += 2
+            block.Top += 5
         Next
 
         CheckPlayer()
@@ -101,7 +134,7 @@
 
     Private Async Sub StartGame()
         While gameStart
-            Await Task.Delay(10)
+            Await Task.Delay(game_var.eam_difficulty_level)
             MoveBlocks()
         End While
     End Sub
@@ -133,7 +166,7 @@
             gameStart = False
             PictureBox1.Image = My.Resources.char1_exploded
             Task.Delay(300).Wait()
-            MsgBox("You died")
+            MessageBox.Show("You died", "Game")
             ResetBlocks()
         End If
     End Sub
@@ -147,6 +180,7 @@
         isDead = False
         playerPosition = 2
         playerScore = 0
+        Start_Ignite = False
 
         UpdateUserPosition()
 
