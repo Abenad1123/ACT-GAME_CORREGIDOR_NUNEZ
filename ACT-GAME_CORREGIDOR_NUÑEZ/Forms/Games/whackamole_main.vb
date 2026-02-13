@@ -166,4 +166,8 @@
         Await Task.Delay(60)
         mole.Image = My.Resources.mole_empty
     End Sub
+
+    Private Sub settings_Click(sender As Object, e As EventArgs) Handles settings.Click
+        OpenForm(Of whackamole_settings)(Me)
+    End Sub
 End Class
