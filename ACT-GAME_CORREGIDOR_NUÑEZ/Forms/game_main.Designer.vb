@@ -39,6 +39,7 @@ Partial Class game_main
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.AutoSize = True
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 5
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.5!))
@@ -54,21 +55,22 @@ Partial Class game_main
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1000, 562)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.5!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.5!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1902, 1033)
         Me.TableLayoutPanel1.TabIndex = 20
         '
         'wam_btn
         '
         Me.wam_btn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.wam_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.whackamole_icon_256
-        Me.wam_btn.Location = New System.Drawing.Point(575, 336)
+        Me.wam_btn.Location = New System.Drawing.Point(1093, 541)
         Me.wam_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.wam_btn.Name = "wam_btn"
-        Me.wam_btn.Size = New System.Drawing.Size(275, 226)
+        Me.wam_btn.Size = New System.Drawing.Size(523, 335)
         Me.wam_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.wam_btn.TabIndex = 4
         Me.wam_btn.TabStop = False
@@ -77,10 +79,10 @@ Partial Class game_main
         '
         Me.rps_btn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rps_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.rockpaperscissors_icon_256
-        Me.rps_btn.Location = New System.Drawing.Point(150, 336)
+        Me.rps_btn.Location = New System.Drawing.Point(285, 541)
         Me.rps_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.rps_btn.Name = "rps_btn"
-        Me.rps_btn.Size = New System.Drawing.Size(275, 226)
+        Me.rps_btn.Size = New System.Drawing.Size(523, 335)
         Me.rps_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.rps_btn.TabIndex = 3
         Me.rps_btn.TabStop = False
@@ -89,10 +91,10 @@ Partial Class game_main
         '
         Me.mch_btn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.mch_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.mathchallenge_icon_256
-        Me.mch_btn.Location = New System.Drawing.Point(150, 112)
+        Me.mch_btn.Location = New System.Drawing.Point(285, 206)
         Me.mch_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.mch_btn.Name = "mch_btn"
-        Me.mch_btn.Size = New System.Drawing.Size(275, 224)
+        Me.mch_btn.Size = New System.Drawing.Size(523, 335)
         Me.mch_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.mch_btn.TabIndex = 2
         Me.mch_btn.TabStop = False
@@ -101,10 +103,10 @@ Partial Class game_main
         '
         Me.etm_btn.Dock = System.Windows.Forms.DockStyle.Fill
         Me.etm_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.evadethemissles_icon_256
-        Me.etm_btn.Location = New System.Drawing.Point(575, 112)
+        Me.etm_btn.Location = New System.Drawing.Point(1093, 206)
         Me.etm_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.etm_btn.Name = "etm_btn"
-        Me.etm_btn.Size = New System.Drawing.Size(275, 224)
+        Me.etm_btn.Size = New System.Drawing.Size(523, 335)
         Me.etm_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.etm_btn.TabIndex = 0
         Me.etm_btn.TabStop = False
@@ -117,17 +119,18 @@ Partial Class game_main
         Me.Label1.Font = New System.Drawing.Font("MV Boli", 50.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(994, 112)
+        Me.Label1.Size = New System.Drawing.Size(1896, 206)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "CLICK ANY GAME TO PLAY"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'game_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1000, 562)
+        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.BackgroundImage = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.abedadi
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1902, 1033)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

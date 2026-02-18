@@ -34,29 +34,30 @@ Partial Class game_welcome
         Me.TableLayoutPanel2.BackgroundImage = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.game_bg
         Me.TableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.continue_btn, 1, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.2955!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.761566!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.97153!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.06406!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.03203!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.7212!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1000, 562)
         Me.TableLayoutPanel2.TabIndex = 18
         '
         'continue_btn
         '
+        Me.continue_btn.BackColor = System.Drawing.Color.Transparent
         Me.continue_btn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.continue_btn.Image = Global.ACT_GAME_CORREGIDOR_NUÑEZ.My.Resources.Resources.cont_btn
-        Me.continue_btn.Location = New System.Drawing.Point(450, 423)
+        Me.continue_btn.Image = CType(resources.GetObject("continue_btn.Image"), System.Drawing.Image)
+        Me.continue_btn.Location = New System.Drawing.Point(430, 405)
         Me.continue_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.continue_btn.Name = "continue_btn"
-        Me.continue_btn.Size = New System.Drawing.Size(100, 37)
+        Me.continue_btn.Size = New System.Drawing.Size(140, 62)
         Me.continue_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.continue_btn.TabIndex = 0
         Me.continue_btn.TabStop = False

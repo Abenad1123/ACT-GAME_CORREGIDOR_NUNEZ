@@ -1,6 +1,6 @@
 ﻿Public Class game_var
     '------- WHACK A MOLE VARIABLES -------
-    Public Shared standard_timeDuration As Integer = 10
+    Public Shared standard_timeDuration As Integer = 30
     Public Shared wam_highestPlayerScore As Integer
     Public Shared wam_difficulty_level As String = "Normal"
 

@@ -26,6 +26,8 @@ Public Class mathchallenge_main
     End Sub
 
     Dim Level As Integer = 0
+    Dim score As Integer = 0
+    Dim scoreMultiplier As Integer = 1
     Dim currentQuestion As Integer = 0
     Dim prevQuestions As New List(Of Integer)
     Dim rand As New Random()
@@ -45,6 +47,12 @@ Public Class mathchallenge_main
         Label2.UseCompatibleTextRendering = True
         Label2.Font = GetFont("minecraft", 60)
 
+        Label3.UseCompatibleTextRendering = True
+        Label3.Font = GetFont("minecraft", 40)
+
+        Label4.UseCompatibleTextRendering = True
+        Label4.Font = GetFont("minecraft", 40)
+
         InitalText()
     End Sub
 
@@ -55,6 +63,7 @@ Public Class mathchallenge_main
         Button2.Text = "Start"
         Button3.Text = "Start"
         Button4.Text = "Start"
+        Label4.Text = "0"
 
     End Sub
 
@@ -78,6 +87,7 @@ Public Class mathchallenge_main
         If Level >= 0 And Level < MapImages.Length Then
             PictureBox1.Image = MapImages(Level)
         End If
+        Label4.Text = score.ToString()
     End Sub
 
 
@@ -88,6 +98,8 @@ Public Class mathchallenge_main
             MsgBox("Game Over! You have no more lives left. Restarting the game.")
             lives = 3
             Level = 0
+            score = 0
+            scoreMultiplier = 1
             heart1.Image = My.Resources.heart
             heart2.Image = My.Resources.heart
             heart3.Image = My.Resources.heart
@@ -106,6 +118,8 @@ Public Class mathchallenge_main
             MessageBox.Show("Congratulations! You've completed the game. Restarting.", "Game Complete")
             lives = 3
             Level = 0
+            score = 0
+            scoreMultiplier = 1
             InitalText()
             UpdateMap()
             heart1.Image = My.Resources.heart
@@ -121,6 +135,9 @@ Public Class mathchallenge_main
         If correct Then
             MessageBox.Show("Correct!", "Annoucement")
             Level += 1
+            scoreMultiplier += 1
+            score += 1000 * scoreMultiplier
+
             If Level = 8 Then
                 UpdateMap()
                 checkanswerEvent(Nothing, Nothing)
@@ -129,6 +146,7 @@ Public Class mathchallenge_main
             UpdateMap()
             LoadQuestion()
         Else
+            scoreMultiplier = 1
             lives -= 1
             Select Case lives
                 Case 0 : heart1.Image = My.Resources.heart_dead

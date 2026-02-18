@@ -97,6 +97,7 @@ Public Class evadethemissiles_main
 
     Private Async Sub RandomBlock()
         While gameStart
+
             Await Task.Delay(1000)
 
             If inactiveBlocks.Count = 0 Then Continue While
@@ -192,5 +193,9 @@ Public Class evadethemissiles_main
             block.Top = 0
             block.Visible = False
         Next
+    End Sub
+
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+
     End Sub
 End Class

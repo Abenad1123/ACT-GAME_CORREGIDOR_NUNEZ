@@ -57,6 +57,7 @@
 
     Private Async Sub Start_Game(sender As Object, e As EventArgs) Handles Button7.Click
         If GameRunning = False Then
+            Button7.Visible = False
             Await Task.Delay(500)
             Label4.Text = "3"
             Await Task.Delay(1000)
@@ -70,7 +71,6 @@
             GameRunning = True
             TimerTick()
             SpawnMoles()
-            Button7.Visible = False
         End If
     End Sub
     Private Async Sub TimerTick()

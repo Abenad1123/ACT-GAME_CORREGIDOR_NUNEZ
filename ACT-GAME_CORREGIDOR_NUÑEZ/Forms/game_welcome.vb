@@ -4,6 +4,6 @@
     End Sub
 
     Private Sub Initializer(sender As Object, e As EventArgs) Handles MyBase.Load
-        Basic.ImgHover(continue_btn, My.Resources.cont_btn, My.Resources.cont_btn_hover)
+        Basic.ImgHover(continue_btn, My.Resources.start, My.Resources.start_hover)
     End Sub
 End Class
